@@ -152,3 +152,22 @@ class GrafoMatriz:
       pesoTotal = pesoTotal + pesoMasBajo
 
     return (pesoTotal, conexionesArbol)
+  def obtenerVecinos(self, vertice):
+    if vertice not in self.vertices:
+      return []
+    posicion = self.vertices.index(vertice)
+    vecinos = []
+    for i in range(self.tamano):
+      if self.matrizAdy[posicion][i] != 0:
+        vecinos.append(self.vertices[i])
+    return vecinos
+
+  def obtenerArista(self, vertice1, vertice2):
+    if vertice1 not in self.vertices or vertice2 not in self.vertices:
+      return None
+    pos1 = self.vertices.index(vertice1)
+    pos2 = self.vertices.index(vertice2)
+    peso = self.matrizAdy[pos1][pos2]
+    if peso == 0:
+      return None
+    return type('Arista', (), {'distancia': peso, 'es_transitable': lambda self: True})()

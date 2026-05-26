@@ -21,7 +21,7 @@ class CampusUdeM:
             "Bloque 5 - Ciencias Básicas",
             "Bloque 6 - Ciencias Económicas",
             "Bloque 7 - Contaduría",
-            "Zona 8 - Cancha Central",
+            "Bloque 8 - Cancha Central",
             "Bloque 9 - Producción de Televisión",
             "Bloque 10 - Comunicación e Idiomas",
             "Bloque 11 - Audiovisuales",
@@ -40,18 +40,18 @@ class CampusUdeM:
             ("Bloque 1 - Coliseo Cubierto", "Bloque 2 - Bienestar Universitario", 90, 3, 2, True, "disponible"),
             ("Bloque 1 - Coliseo Cubierto", "Bloque 3 - Centro de Laboratorios", 130, 4, 3, True, "disponible"),
             ("Bloque 2 - Bienestar Universitario", "Bloque 3 - Centro de Laboratorios", 80, 3, 2, True, "disponible"),
-            ("Bloque 2 - Bienestar Universitario", "Zona 8 - Cancha Central", 120, 4, 2, True, "disponible"),
+            ("Bloque 2 - Bienestar Universitario", "Bloque 8 - Cancha Central", 120, 4, 2, True, "disponible"),
             ("Bloque 3 - Centro de Laboratorios", "Bloque 4 - Ingenierías", 100, 4, 3, True, "disponible"),
             ("Bloque 4 - Ingenierías", "Bloque 4 - Zona de Comidas", 40, 2, 3, True, "disponible"),
             ("Bloque 4 - Ingenierías", "Bloque 5 - Ciencias Básicas", 70, 3, 2, True, "disponible"),
             ("Bloque 4 - Zona de Comidas", "Bloque 5 - Ciencias Básicas", 60, 3, 4, True, "disponible"),
-            ("Bloque 4 - Zona de Comidas", "Zona 8 - Cancha Central", 90, 4, 4, True, "disponible"),
+            ("Bloque 4 - Zona de Comidas", "Bloque 8 - Cancha Central", 90, 4, 4, True, "disponible"),
             ("Bloque 5 - Ciencias Básicas", "Bloque 6 - Ciencias Económicas", 85, 3, 2, True, "disponible"),
             ("Bloque 6 - Ciencias Económicas", "Bloque 7 - Contaduría", 75, 3, 2, True, "disponible"),
-            ("Bloque 6 - Ciencias Económicas", "Zona 8 - Cancha Central", 110, 4, 3, True, "disponible"),
+            ("Bloque 6 - Ciencias Económicas", "Bloque 8 - Cancha Central", 110, 4, 3, True, "disponible"),
             ("Bloque 7 - Contaduría", "Bloque 11 - Audiovisuales", 95, 4, 2, True, "disponible"),
-            ("Zona 8 - Cancha Central", "Bloque 13 - Biblioteca", 140, 5, 3, True, "disponible"),
-            ("Zona 8 - Cancha Central", "Bloque 14 - Centro de Cómputo", 160, 6, 3, True, "disponible"),
+            ("Bloque 8 - Cancha Central", "Bloque 13 - Biblioteca", 140, 5, 3, True, "disponible"),
+            ("Bloque 8 - Cancha Central", "Bloque 14 - Centro de Cómputo", 160, 6, 3, True, "disponible"),
             ("Bloque 9 - Producción de Televisión", "Bloque 10 - Comunicación e Idiomas", 70, 3, 2, True, "disponible"),
             ("Bloque 9 - Producción de Televisión", "Bloque 11 - Audiovisuales", 90, 4, 2, True, "disponible"),
             ("Bloque 10 - Comunicación e Idiomas", "Bloque 11 - Audiovisuales", 60, 2, 2, True, "disponible"),
@@ -63,7 +63,7 @@ class CampusUdeM:
             ("Bloque 16 - Derecho", "Bloque 17 - Teatro", 85, 3, 2, True, "disponible"),
             ("Bloque 13 - Biblioteca", "Bloque 16 - Derecho", 150, 6, 3, True, "disponible"),
             ("Bloque 14 - Centro de Cómputo", "Bloque 17 - Teatro", 170, 7, 3, True, "disponible"),
-            ("Bloque 3 - Centro de Laboratorios", "Zona 8 - Cancha Central", 130, 5, 3, False, "disponible"),
+            ("Bloque 3 - Centro de Laboratorios", "Bloque 8 - Cancha Central", 130, 5, 3, False, "disponible"),
             ("Bloque 5 - Ciencias Básicas", "Bloque 9 - Producción de Televisión", 180, 7, 4, False, "disponible"),
             ("Bloque 4 - Zona de Comidas", "Bloque 13 - Biblioteca", 220, 8, 5, True, "mantenimiento"),
             ("Bloque 11 - Audiovisuales", "Bloque 14 - Centro de Cómputo", 130, 5, 3, True, "bloqueado")
@@ -106,7 +106,7 @@ class CampusUdeM:
         return self.aristas.get((pos1, pos2))
     
     def listar_ubicaciones(self):
-        print("\n=== UBICACIONES DEL CAMPUS UDEM ===")
+        print("\n UBICACIONES DEL CAMPUS UDEM ")
         for i, ubicacion in enumerate(self.grafo.vertices, 1):
             print(f"{i}. {ubicacion}")
         print()
