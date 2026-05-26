@@ -31,6 +31,3 @@ campus_udem.py = Mapa del campus con todas las conexiones
 motor_rutas.py = Los algoritmos que encuentran las rutas
 tour_visitantes.py = El recorrido para visitantes
 
-## Rápido y simple
-
-No hay configuración complicada. Solo ejecuta y elige dónde quieres ir.
