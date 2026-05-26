@@ -1,33 +1,44 @@
-# Navegación Campus UDEM
 
-Sistema para encontrar rutas en el campus. Elige dónde quieres ir y cómo quieres llegar por distancia, tiempo, accesibilidad.
 
-## ¿Qué hace?
+DESCRIPCION DEL PROYECTO
 
-#Encuentra el camino más corto entre dos puntos del campus
-#Ofrece diferentes tipos de rutas: la más rápida, la menos transitada la más accesible
-#Genera un recorrido que pasa por todas las ubicaciones importantes
-#Evita rutas bloqueadas o en mantenimiento
+Este proyecto implementa un sistema de navegacion para el campus de la Universidad de Medellin (UDEM). Utiliza estructuras de grafos para encontrar rutas optimas entre diferentes ubicaciones del campus.
 
-## Cómo usarlo
+El sistema ofrece multiples opciones de busqueda de rutas:
+- Ruta mas corta: distancia minima entre dos puntos
+- Ruta mas rapida: tiempo minimo considerando velocidad de transito
+- Ruta con menor congestion: evita areas transitadas
+- Ruta accesible: rutas para personas con movilidad reducida
+- Tour de visitantes: recorrido que pasa por todas las ubicaciones importantes
 
-```bash
-python main.py
-```
+COMO EJECUTAR EL PROYECTO
 
-Se abre un menú interactivo donde puedes:
+Requisitos:
+- Python 3.x instalado
 
-#Ver ubicaciones = (Lista todos los bloques del campus)
-#Buscar ruta = (Elige origen y destino y tipo de ruta) (corta, rápida, accesible)
-#Tour de visitantes = (Recorrido que pasa por todo el campus)
-#Salir
+Pasos:
+1. Navega a la carpeta Pratica
+2. Ejecuta el programa con:
+   python main.py
+3. Selecciona una opcion del menu principal
+4. Sigue las indicaciones en pantalla para encontrar rutas o explorar el campus
 
-Responde las preguntas que aparecen y listo te muestrara el camino.
+El programa abre un menu interactivo donde puedes:
+- Buscar ruta entre dos ubicaciones
+- Ver tour para visitantes
+- Listar todas las ubicaciones del campus
+- Salir del programa
 
-## Archivos principales
+SUPUESTOS ASUMIDOS
 
-main.py = El programa, ejecuta esto
-campus_udem.py = Mapa del campus con todas las conexiones
-motor_rutas.py = Los algoritmos que encuentran las rutas
-tour_visitantes.py = El recorrido para visitantes
+- El campus esta modelado como un grafo conexo donde cada ubicacion (bloque, edificio) es un nodo
+- Las aristas entre ubicaciones tienen atributos: distancia, tiempo, congestion y accesibilidad
+- La distancia esta en metros
+- El tiempo esta en minutos
+- El nivel de congestion es una escala de 1 a 5
+- Una ruta es accesible si todos sus segmentos tienen la propiedad accesible = True
+- Se asume que el usuario tiene acceso a la consola/terminal para ejecutar el programa
+- No hay autenticacion requerida para acceder al sistema
+- Los datos del campus (ubicaciones y conexiones) estan predefinidos en campus_udem.py
+
 
